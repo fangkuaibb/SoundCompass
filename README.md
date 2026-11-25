@@ -6,7 +6,7 @@ A four-microphone acoustic direction finder for ESP32, paired with a 24-LED ring
 sound source. The direction estimate is computed on-device with GCC-PHAT, and a WebRTC VAD from
 Espressif's `esp-sr` can be enabled so that only human voice moves the light.
 
-![SoundCompass module](docs/images/soundcompass-module.png)
+<p align="center"><img src="docs/images/soundcompass-module.png" width="480" alt="SoundCompass module"></p>
 
 The module carries four MEMS microphones at 0°/90°/180°/270°, an ES7210 four-channel ADC and 24
 addressable RGB LEDs around the rim. It plugs into any ESP32 board that has I2S TDM through a

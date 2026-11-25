@@ -5,7 +5,7 @@
 面向 ESP32 的四麦克风声源方向识别方案，配合 24 颗环形灯珠，把声源方向直接"指"出来。
 方向由 GCC-PHAT 在片上计算，也可以启用 Espressif `esp-sr` 的 WebRTC VAD，只让人声驱动灯环。
 
-![SoundCompass 模块](docs/images/soundcompass-module.png)
+<p align="center"><img src="docs/images/soundcompass-module.png" width="480" alt="SoundCompass 模块"></p>
 
 模块在 0°/90°/180°/270° 四个方位布置了 MEMS 麦克风，中央是 ES7210 四通道 ADC，外圈是
 24 颗可寻址 RGB 灯珠。通过一个 2×5、2.54 mm 排针接到任意支持 I2S TDM 的 ESP32 板：
