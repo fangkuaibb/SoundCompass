@@ -1,0 +1,21 @@
+# ESP-IDF build output
+build/
+build_*/
+sdkconfig
+sdkconfig.old
+
+# Components downloaded by the IDF component manager
+managed_components/
+
+# Local tooling and editor settings
+.esmith/
+.trae/
+.vscode/
+.screenshots/
+tools/
+.clangd
+AGENTS.md
+
+# Archives
+*.rar
+*.zip

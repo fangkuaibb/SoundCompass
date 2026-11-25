@@ -1,0 +1,53 @@
+menu "LED ring effects"
+
+    config LRFX_GPIO
+        int "WS2812 data GPIO"
+        default 4
+
+    config LRFX_LED_COUNT
+        int "LED count"
+        default 24
+        range 1 64
+
+    config LRFX_COLOR_R
+        int "Color R"
+        default 0
+        range 0 255
+
+    config LRFX_COLOR_G
+        int "Color G"
+        default 0
+        range 0 255
+
+    config LRFX_COLOR_B
+        int "Color B"
+        default 255
+        range 0 255
+
+    config LRFX_MAX_BRIGHTNESS
+        int "Max brightness"
+        default 255
+        range 1 255
+
+    config LRFX_GRB_ORDER
+        bool "LED data order is GRB"
+        default y
+        help
+            大多数 WS2812/WS2812C 为 GRB；颜色不对时切换此项。
+
+    config LRFX_TRAIL_LEN
+        int "Trail length (LEDs)"
+        default 6
+        range 0 64
+
+    config LRFX_DECAY_MS
+        int "Trail decay time (ms)"
+        default 450
+        range 50 5000
+
+    config LRFX_IDLE_TIMEOUT_MS
+        int "Auto off timeout (ms)"
+        default 1200
+        range 0 10000
+
+endmenu

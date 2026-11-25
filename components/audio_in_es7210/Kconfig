@@ -1,0 +1,45 @@
+menu "Audio in ES7210"
+
+    config AUDIO_IN_I2C_SCL_GPIO
+        int "I2C SCL GPIO"
+        default 5
+        help
+            ES7210 控制接口 SCL 引脚。
+
+    config AUDIO_IN_I2C_SDA_GPIO
+        int "I2C SDA GPIO"
+        default 6
+        help
+            ES7210 控制接口 SDA 引脚。
+
+    config AUDIO_IN_I2S_PORT
+        int "I2S port number"
+        default 0
+        range 0 1
+        help
+            使用的 I2S 控制器序号。单 I2S 的芯片只能填 0。
+
+    config AUDIO_IN_I2S_MCLK_GPIO
+        int "I2S MCLK GPIO"
+        default 16
+
+    config AUDIO_IN_I2S_BCLK_GPIO
+        int "I2S BCLK GPIO"
+        default 17
+
+    config AUDIO_IN_I2S_WS_GPIO
+        int "I2S LRCK/WS GPIO"
+        default 18
+
+    config AUDIO_IN_I2S_DIN_GPIO
+        int "I2S DIN GPIO"
+        default 15
+
+    config AUDIO_IN_GAIN_DB
+        int "Microphone gain (dB)"
+        default 30
+        range 0 42
+        help
+            ES7210 麦克风增益，按 3dB 步进。过高会削顶。
+
+endmenu

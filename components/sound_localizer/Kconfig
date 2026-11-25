@@ -1,0 +1,39 @@
+menu "Sound localizer"
+
+    config SL_MIC_SPACING_MM
+        int "Diagonal mic spacing (mm)"
+        default 40
+        help
+            对角两颗麦克风(MIC1-MIC4、MIC2-MIC3)的间距。
+
+    config SL_ANGLE_OFFSET_DEG
+        int "Angle offset (deg)"
+        default 0
+        range -180 180
+        help
+            安装角度校准，正值为顺时针补偿。
+
+    config SL_CLOCKWISE
+        bool "Angle increases clockwise"
+        default y
+        help
+            关闭后角度整体镜像，用于声源与灯带方向相反的情况。
+
+    config SL_VOICE_MIN_DB
+        int "Voice trigger level (dBFS)"
+        default -40
+        range -90 -10
+
+    config SL_VOICE_FLATNESS_X100
+        int "Voice spectral flatness max (x100)"
+        default 45
+        range 5 100
+        help
+            谱平坦度上限，越小越严格。
+
+    config SL_MIN_CONFIDENCE_X100
+        int "Minimum correlation confidence (x100)"
+        default 35
+        range 5 95
+
+endmenu
